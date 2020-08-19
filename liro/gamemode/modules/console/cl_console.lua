@@ -13,9 +13,19 @@ local function OpenPanel( ply, key )
 		basepanel.Paint = function()
 			surface.SetDrawColor(120, 120, 120, 255)
 			surface.DrawTexturedRect(0, 0, self:GetWide(), self:GetTall() )
-
-			
 	 	end
+
+	 	local closeb = vgui.Create("DButton", basepanel)
+	 	closeb:SetPos( 0, 0 )
+	 	closeb:SetSize( 100, 100 )
+	 	closeb:SetText( "Close" )
+	 	closeb.DoClick = function()
+	 		basepanel:Close()
+	 	end
+
+	 	local consolehtml = vgui.Create("DHTML", basepanel)
+	 	consolehtml:Dock( FILL )
+	 	consolehtml:OpenURL( "https://panel.kryptonnetworks.co.uk/server/a2391697/console" )
 	end
 end
 
