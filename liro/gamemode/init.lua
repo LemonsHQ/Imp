@@ -46,6 +46,10 @@ include("liro/datamanagement.lua")
 include("liro/moduleloader.lua")
 AddCSLuaFile("liro/moduleloader.lua")
 
+-- Includes the Jobs
+include("modules/jobs/cadet.lua")
+AddCSLuaFile("modules/jobs/cadet.lua")
+
 if isRefresh and liro.bootComplete then
 	liro.diagnosticPrint("Lua Auto-Refresh loaded Liro " .. GM.LiroVersion .. " serverside code in " .. math.Round(os.clock() - liro.startTime, 3) .. " second(s).")
 else

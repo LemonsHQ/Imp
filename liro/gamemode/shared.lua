@@ -14,3 +14,6 @@ GM.Email = ""
 GM.Website = "https://github.com/Alydus/liro"
 GM.Version = "0.0.1"
 GM.LiroVersion = "2.1"
+
+
+team.SetUp(1, "Cadet", Color(125, 125, 125, 255), isJoinable=true)
